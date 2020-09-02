@@ -16,65 +16,105 @@
     <title>Recipie App</title>
   </head>
   <body>
-    <form class="shadow p-3 mb-5 bg-white rounded" id="form">
-      <div class="form-group row">
-        <div class="input-group mb-3">
-          <input
-            id="choose-userId"
-            type="number"
-            name=""
-            value=""
-            class="form-control"
-            placeholder="Recipient's username"
-            aria-label="Recipient's username"
-            aria-describedby="button-addon2"
-          />
-          <div class="input-group-append">
+    <div class="progress-container">
+      <div class="progress-bar" id="myBar"></div>
+    </div>
+    <div id="form-and-preview-container">
+      <form
+        class="shadow p-5 mb-5 bg-white rounded border border-secondary"
+        id="form"
+      >
+        <div class="form-group row">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <button
+                onclick="findByUserId()"
+                class="btn btn-outline-primary"
+                type="button"
+                id="button-addon2"
+              >
+                Find by userId!
+              </button>
+            </div>
+            <input
+              id="choose-userId"
+              type="number"
+              name=""
+              value=""
+              class="form-control"
+              placeholder=""
+              aria-label=""
+              aria-describedby="button-addon2"
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <button
+                onclick="findByIdScope()"
+                class="btn btn-outline-primary"
+                type="button"
+                id="button-addon1"
+              >
+                Find by Id scope!
+              </button>
+            </div>
+            <input
+              id="choose-Id-start"
+              type="number"
+              aria-label="First name"
+              class="form-control"
+            />
+            <input
+              id="choose-Id-stop"
+              type="number"
+              aria-label="Last name"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="result-buttons">
             <button
-              onclick="filterByUserId()"
-              class="btn btn-outline-primary"
+              onclick="findByAllFilters()"
+              id="filter-btn"
+              class="btn btn-primary"
               type="button"
-              id="button-addon2"
             >
-              Set userId!
+              Show filtered data.
+            </button>
+
+            <button
+              onclick="delateAllResult()"
+              id="delate-btn"
+              class="btn btn-danger"
+              type="button"
+            >
+              Delate all.
             </button>
           </div>
         </div>
-      </div>
-
-      <div class="form-group row">
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <button
-              onclick="findFromIdScope()"
-              class="btn btn-outline-primary"
-              type="button"
-              id="button-addon1"
-            >
-              Set Id scope!
-            </button>
-          </div>
-          <input
-            id="choose-Id-start"
-            type="number"
-            aria-label="First name"
-            class="form-control"
-          />
-          <input
-            id="choose-Id-stop"
-            type="number"
-            aria-label="Last name"
-            class="form-control"
-          />
-        </div>
-      </div>
-    </form>
-
+      </form>
+      <div
+        class="shadow-white p-3 mb-5 bg-white rounded border border-secondary"
+        id="preview-container"
+      ></div>
+    </div>
     <div id="list-container" class="border border-primary">
-      <h1 id="method-description">Wynik filtrowania!</h1>
+      <h1 id="results-container-description">Result list!</h1>
     </div>
 
-    <script src="script.js"></script>
+    <script src="./modules/globalConst.js"></script>
+    <script src="./modules/scrollProgress.js"></script>
+    <script src="./modules/clearPreview.js"></script>
+    <script src="./modules/findByUserId.js"></script>
+    <script src="./modules/findByIdScope.js"></script>
+    <script src="./modules/findByAllFilters.js"></script>
+    <script src="./modules/showPreview.js"></script>
+    <script src="./modules/generateResult.js"></script>
+    <script src="./modules/delateAllResult.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
