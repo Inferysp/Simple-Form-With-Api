@@ -1,7 +1,17 @@
 # Simple-Form-With-Api
 
-Description: Simple form fetching data with simple bootstrap design.
+My first app with Fetch.
 
-Demo: https://inferysp.github.io/Simple-Form-With-Api/
+Description:
+
+Simple application fetching data by userId, Id and/or both.
+filtering result is given to "preview" and "every search list" section
+I used Bootstrap and a little css to style app.
+In js modules I tried to figure out the most readable, not much repetitive code
+and hope helping names for easy application review.
+
+gitHub-pages Demo: 
+
+https://inferysp.github.io/Simple-Form-With-Api/
 
 enjoy!
