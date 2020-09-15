@@ -1,10 +1,10 @@
-### Simple-Form-With-Api
+# Simple-Form-With-Api
 
-# My first app with Fetch.
+### My first app with Fetch.
 
 ## Table of content
 
-* [Description](#Description)
+* [Description](Description)
 * [Demo](#Demo)
 * [Used technologies](#Used-technologies)
 * [Setup](#Setup)
@@ -30,9 +30,8 @@ and hope helping names for easy application review.
 
 ## Setup
 To run this project locally, install it using npm:
-
-...
+`
 $ cd ../Simple-Form-With-Fetch
 $ npm install
 $ npm start
-...
+`
